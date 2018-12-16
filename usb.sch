@@ -1,0 +1,575 @@
+EESchema Schematic File Version 4
+LIBS:arduino-uno-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 4
+Title "Arduino Uno Rev3"
+Date "2018-12-15"
+Rev "1"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 "yangle0125@qq.com"
+Comment4 "Created by yangle"
+$EndDescr
+$Comp
+L Connector:USB_B J2
+U 1 1 5C163F8B
+P 1350 4250
+F 0 "J2" H 1405 4717 50  0000 C CNN
+F 1 "USB_B" H 1405 4626 50  0000 C CNN
+F 2 "Connector_USB:USB_B_OST_USB-B1HSxx_Horizontal" H 1500 4200 50  0001 C CNN
+F 3 " ~" H 1500 4200 50  0001 C CNN
+	1    1350 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Polyfuse F1
+U 1 1 5C16443F
+P 1850 4050
+F 0 "F1" V 1625 4050 50  0000 C CNN
+F 1 "MF-MSMF050-2" V 1716 4050 50  0000 C CNN
+F 2 "Fuse:Fuse_1812_4532Metric" H 1900 3850 50  0001 L CNN
+F 3 "https://www.bourns.com/docs/Product-Datasheets/mfmsmf.pdf" H 1850 4050 50  0001 C CNN
+	1    1850 4050
+	0    1    1    0   
+$EndComp
+$Comp
+L Arduino_Uno:RN RN3
+U 1 1 5C164518
+P 2500 4250
+F 0 "RN3" V 2293 4250 50  0000 C CNN
+F 1 "22" V 2384 4250 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0603" V 2430 4250 50  0001 C CNN
+F 3 "~" H 2500 4250 50  0001 C CNN
+	1    2500 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L Arduino_Uno:RN RN3
+U 4 1 5C164596
+P 2950 4350
+F 0 "RN3" V 2743 4350 50  0000 C CNN
+F 1 "22" V 2834 4350 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0603" V 2880 4350 50  0001 C CNN
+F 3 "~" H 2950 4350 50  0001 C CNN
+	4    2950 4350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Varistor RV1
+U 1 1 5C1647A6
+P 1700 4750
+F 0 "RV1" H 1803 4796 50  0000 L CNN
+F 1 "CG0603MLC-05E" V 1803 4705 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1630 4750 50  0001 C CNN
+F 3 "https://www.bourns.com/docs/Product-Datasheets/MLC.pdf" H 1700 4750 50  0001 C CNN
+	1    1700 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Varistor RV2
+U 1 1 5C1649E8
+P 2050 4750
+F 0 "RV2" H 2153 4796 50  0000 L CNN
+F 1 "CG0603MLC-05E" V 2153 4705 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1980 4750 50  0001 C CNN
+F 3 "https://www.bourns.com/docs/Product-Datasheets/MLC.pdf" H 2050 4750 50  0001 C CNN
+	1    2050 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Ferrite_Bead FB1
+U 1 1 5C164B69
+P 1700 5500
+F 0 "FB1" H 1837 5546 50  0000 L CNN
+F 1 "BLM21" H 1837 5455 50  0000 L CNN
+F 2 "Inductor_SMD:L_0805_2012Metric" V 1630 5500 50  0001 C CNN
+F 3 "https://www.murata.com/en-us/products/productdata/8796738977822/ENFA0005.pdf" H 1700 5500 50  0001 C CNN
+	1    1700 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 4050 1700 4050
+Wire Wire Line
+	1650 4250 1700 4250
+Wire Wire Line
+	2650 4250 4850 4250
+Wire Wire Line
+	4850 4350 3100 4350
+Wire Wire Line
+	2800 4350 2050 4350
+Wire Wire Line
+	1700 4600 1700 4250
+Connection ~ 1700 4250
+Wire Wire Line
+	1700 4250 2350 4250
+Wire Wire Line
+	2050 4600 2050 4350
+Wire Wire Line
+	2050 4350 1650 4350
+Wire Wire Line
+	1700 4900 1700 5000
+Wire Wire Line
+	2050 4900 2050 5000
+Wire Wire Line
+	2050 5000 1700 5000
+Connection ~ 1700 5000
+Wire Wire Line
+	1700 5000 1700 5350
+Wire Wire Line
+	1350 4650 1350 6150
+Wire Wire Line
+	1350 6150 1700 6150
+Wire Wire Line
+	1700 5650 1700 6150
+Connection ~ 1700 6150
+Wire Wire Line
+	1700 6150 5450 6150
+Text HLabel 2000 4050 2    50   Output ~ 0
+USBVCC
+Wire Wire Line
+	1250 4650 1250 5000
+Wire Wire Line
+	1250 5000 1700 5000
+$Comp
+L power:GND #PWR023
+U 1 1 5C166E33
+P 5550 6400
+F 0 "#PWR023" H 5550 6150 50  0001 C CNN
+F 1 "GND" H 5555 6227 50  0000 C CNN
+F 2 "" H 5550 6400 50  0001 C CNN
+F 3 "" H 5550 6400 50  0001 C CNN
+	1    5550 6400
+	1    0    0    -1  
+$EndComp
+Text HLabel 5450 3350 1    50   Output ~ 0
+USBVCC
+$Comp
+L power:+5V #PWR022
+U 1 1 5C167071
+P 5550 3200
+F 0 "#PWR022" H 5550 3050 50  0001 C CNN
+F 1 "+5V" H 5565 3373 50  0000 C CNN
+F 2 "" H 5550 3200 50  0001 C CNN
+F 3 "" H 5550 3200 50  0001 C CNN
+	1    5550 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C9
+U 1 1 5C1674ED
+P 4350 5000
+F 0 "C9" H 4465 5046 50  0000 L CNN
+F 1 "1u" H 4465 4955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4388 4850 50  0001 C CNN
+F 3 "~" H 4350 5000 50  0001 C CNN
+	1    4350 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR020
+U 1 1 5C167567
+P 4350 5350
+F 0 "#PWR020" H 4350 5100 50  0001 C CNN
+F 1 "GND" H 4355 5177 50  0000 C CNN
+F 2 "" H 4350 5350 50  0001 C CNN
+F 3 "" H 4350 5350 50  0001 C CNN
+	1    4350 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 4550 4350 4850
+Wire Wire Line
+	4350 5150 4350 5350
+$Comp
+L power:+5V #PWR017
+U 1 1 5C167B40
+P 3950 4700
+F 0 "#PWR017" H 3950 4550 50  0001 C CNN
+F 1 "+5V" H 3965 4873 50  0000 C CNN
+F 2 "" H 3950 4700 50  0001 C CNN
+F 3 "" H 3950 4700 50  0001 C CNN
+	1    3950 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C8
+U 1 1 5C167B7D
+P 3950 5000
+F 0 "C8" H 4065 5046 50  0000 L CNN
+F 1 "100n" H 4065 4955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3988 4850 50  0001 C CNN
+F 3 "~" H 3950 5000 50  0001 C CNN
+	1    3950 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 4700 3950 4850
+$Comp
+L power:GND #PWR018
+U 1 1 5C16818B
+P 3950 5350
+F 0 "#PWR018" H 3950 5100 50  0001 C CNN
+F 1 "GND" H 3955 5177 50  0000 C CNN
+F 2 "" H 3950 5350 50  0001 C CNN
+F 3 "" H 3950 5350 50  0001 C CNN
+	1    3950 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 5150 3950 5350
+$Comp
+L Jumper:SolderJumper_2_Open JP1
+U 1 1 5C168BDC
+P 3200 6400
+F 0 "JP1" H 3200 6605 50  0000 C CNN
+F 1 "GROUND" H 3200 6514 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm" H 3200 6400 50  0001 C CNN
+F 3 "~" H 3200 6400 50  0001 C CNN
+	1    3200 6400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 6400 1700 6400
+Wire Wire Line
+	1700 6400 1700 6150
+$Comp
+L Device:Crystal Y1
+U 1 1 5C16ADB4
+P 3850 3950
+F 0 "Y1" V 3804 4081 50  0000 L CNN
+F 1 "Crystal" V 3895 4081 50  0000 L CNN
+F 2 "Crystal:Crystal_SMD_HC49-SD" H 3850 3950 50  0001 C CNN
+F 3 "~" H 3850 3950 50  0001 C CNN
+	1    3850 3950
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5C16AF34
+P 4350 3950
+F 0 "R1" H 4420 3996 50  0000 L CNN
+F 1 "1M" H 4420 3905 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4280 3950 50  0001 C CNN
+F 3 "~" H 4350 3950 50  0001 C CNN
+	1    4350 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C6
+U 1 1 5C16AFC0
+P 3500 3800
+F 0 "C6" V 3248 3800 50  0000 C CNN
+F 1 "22p" V 3339 3800 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3538 3650 50  0001 C CNN
+F 3 "~" H 3500 3800 50  0001 C CNN
+	1    3500 3800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C7
+U 1 1 5C16B055
+P 3500 4100
+F 0 "C7" V 3248 4100 50  0000 C CNN
+F 1 "22p" V 3339 4100 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3538 3950 50  0001 C CNN
+F 3 "~" H 3500 4100 50  0001 C CNN
+	1    3500 4100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4350 3800 3850 3800
+Wire Wire Line
+	3850 3800 3650 3800
+Connection ~ 3850 3800
+Wire Wire Line
+	3650 4100 3850 4100
+Wire Wire Line
+	3850 4100 4350 4100
+Connection ~ 3850 4100
+$Comp
+L power:GND #PWR016
+U 1 1 5C16C3ED
+P 3200 3950
+F 0 "#PWR016" H 3200 3700 50  0001 C CNN
+F 1 "GND" V 3205 3822 50  0000 R CNN
+F 2 "" H 3200 3950 50  0001 C CNN
+F 3 "" H 3200 3950 50  0001 C CNN
+	1    3200 3950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3350 3800 3350 3950
+Wire Wire Line
+	3200 3950 3350 3950
+Connection ~ 3350 3950
+Wire Wire Line
+	3350 3950 3350 4100
+Wire Wire Line
+	5550 3200 5550 3300
+Wire Wire Line
+	5650 3350 5650 3300
+Wire Wire Line
+	5650 3300 5550 3300
+Connection ~ 5550 3300
+Wire Wire Line
+	5550 3300 5550 3350
+Wire Wire Line
+	5550 6150 5550 6400
+Wire Wire Line
+	4850 4550 4350 4550
+$Comp
+L MCU_Microchip_ATmega:ATmega16U2-MU U4
+U 1 1 5C164146
+P 5550 4750
+F 0 "U4" H 5550 3264 50  0000 C CNN
+F 1 "ATmega16U2-MU" H 5550 3173 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.1x3.1mm" H 5550 4750 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/doc7799.pdf" H 5550 4750 50  0001 C CNN
+	1    5550 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 3850 4750 3850
+Wire Wire Line
+	4750 3850 4750 3800
+Wire Wire Line
+	4750 3800 4350 3800
+Connection ~ 4350 3800
+Wire Wire Line
+	4850 4050 4750 4050
+Wire Wire Line
+	4750 4050 4750 4100
+Wire Wire Line
+	4750 4100 4350 4100
+Connection ~ 4350 4100
+Connection ~ 5550 6400
+Wire Wire Line
+	3350 6400 5550 6400
+Connection ~ 2050 4350
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J3
+U 1 1 5C1742EB
+P 3850 3350
+F 0 "J3" H 3900 3667 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 3900 3576 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 3850 3350 50  0001 C CNN
+F 3 "~" H 3850 3350 50  0001 C CNN
+	1    3850 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR021
+U 1 1 5C1743C1
+P 4600 3200
+F 0 "#PWR021" H 4600 3050 50  0001 C CNN
+F 1 "+5V" H 4615 3373 50  0000 C CNN
+F 2 "" H 4600 3200 50  0001 C CNN
+F 3 "" H 4600 3200 50  0001 C CNN
+	1    4600 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Arduino_Uno:RN RN1
+U 3 1 5C174444
+P 4600 3450
+F 0 "RN1" H 4688 3496 50  0000 L CNN
+F 1 "10K" H 4688 3405 50  0000 L CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0603" V 4530 3450 50  0001 C CNN
+F 3 "~" H 4600 3450 50  0001 C CNN
+	3    4600 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D3
+U 1 1 5C174C38
+P 4350 3450
+F 0 "D3" V 4304 3529 50  0000 L CNN
+F 1 "CD1206-S01575" V 4395 3529 50  0000 L CNN
+F 2 "Diode_SMD:D_1206_3216Metric" H 4350 3450 50  0001 C CNN
+F 3 "https://www.bourns.com/docs/Product-Datasheets/CD1206_S01575.pdf" H 4350 3450 50  0001 C CNN
+	1    4350 3450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4600 3200 4600 3250
+Wire Wire Line
+	4850 3650 4600 3650
+Wire Wire Line
+	4600 3650 4600 3600
+Wire Wire Line
+	4350 3600 4350 3650
+Wire Wire Line
+	4350 3650 4600 3650
+Connection ~ 4600 3650
+Wire Wire Line
+	4350 3300 4350 3250
+Wire Wire Line
+	4350 3250 4600 3250
+Connection ~ 4600 3250
+Wire Wire Line
+	4600 3250 4600 3300
+Wire Wire Line
+	3650 3450 3650 3650
+Wire Wire Line
+	3650 3650 4350 3650
+Connection ~ 4350 3650
+Wire Wire Line
+	4350 3250 4150 3250
+Connection ~ 4350 3250
+$Comp
+L power:GND #PWR019
+U 1 1 5C17BA67
+P 4150 3450
+F 0 "#PWR019" H 4150 3200 50  0001 C CNN
+F 1 "GND" H 4155 3277 50  0000 C CNN
+F 2 "" H 4150 3450 50  0001 C CNN
+F 3 "" H 4150 3450 50  0001 C CNN
+	1    4150 3450
+	1    0    0    -1  
+$EndComp
+Text Label 3650 3250 2    50   ~ 0
+MISO2
+Text Label 3650 3350 2    50   ~ 0
+SCK2
+Text Label 4150 3350 0    50   ~ 0
+MOSI2
+Text Label 6250 3750 0    50   ~ 0
+SCK2
+Text Label 6250 3850 0    50   ~ 0
+MOSI2
+Text Label 6250 3950 0    50   ~ 0
+MISO2
+$Comp
+L Connector_Generic:Conn_02x02_Odd_Even J4
+U 1 1 5C17CB7B
+P 6900 4050
+F 0 "J4" H 6950 4267 50  0000 C CNN
+F 1 "Conn_02x02_Odd_Even" H 6950 4176 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 6900 4050 50  0001 C CNN
+F 3 "~" H 6900 4050 50  0001 C CNN
+	1    6900 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 4050 6250 4050
+Wire Wire Line
+	6700 4150 6250 4150
+Wire Wire Line
+	7200 4050 7350 4050
+Wire Wire Line
+	7350 4050 7350 4250
+Wire Wire Line
+	7350 4250 6250 4250
+Wire Wire Line
+	7200 4150 7200 4350
+Wire Wire Line
+	7200 4350 6250 4350
+NoConn ~ 6250 3650
+NoConn ~ 6250 4550
+NoConn ~ 6250 4650
+NoConn ~ 6250 4750
+NoConn ~ 6250 4850
+NoConn ~ 6250 4950
+NoConn ~ 6250 5750
+NoConn ~ 6250 5150
+NoConn ~ 6250 5250
+$Comp
+L Device:LED D4
+U 1 1 5C18811D
+P 6600 5650
+F 0 "D4" H 6591 5866 50  0000 C CNN
+F 1 "TX" H 6591 5775 50  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 6600 5650 50  0001 C CNN
+F 3 "~" H 6600 5650 50  0001 C CNN
+F 4 "YELLOW" H 6600 5650 50  0001 C CNN "颜色"
+	1    6600 5650
+	1    0    0    -1  
+$EndComp
+Text HLabel 6250 5450 2    50   Output ~ 0
+M8RXD
+Text HLabel 6250 5350 2    50   Output ~ 0
+M8TXD
+$Comp
+L Device:LED D5
+U 1 1 5C1884C4
+P 7000 5550
+F 0 "D5" H 6991 5766 50  0000 C CNN
+F 1 "RX" H 6991 5675 50  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 7000 5550 50  0001 C CNN
+F 3 "~" H 7000 5550 50  0001 C CNN
+F 4 "YELLOW" H 7000 5550 50  0001 C CNN "颜色"
+	1    7000 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 5550 6250 5550
+Wire Wire Line
+	6250 5650 6450 5650
+$Comp
+L Arduino_Uno:RN RN2
+U 3 1 5C18A308
+P 7400 5650
+F 0 "RN2" V 7625 5650 50  0000 C CNN
+F 1 "1K" V 7534 5650 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0603" V 7330 5650 50  0001 C CNN
+F 3 "~" H 7400 5650 50  0001 C CNN
+	3    7400 5650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Arduino_Uno:RN RN2
+U 2 1 5C18A41E
+P 7800 5550
+F 0 "RN2" V 7593 5550 50  0000 C CNN
+F 1 "1K" V 7684 5550 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0603" V 7730 5550 50  0001 C CNN
+F 3 "~" H 7800 5550 50  0001 C CNN
+	2    7800 5550
+	0    1    1    0   
+$EndComp
+$Comp
+L Arduino_Uno:RN RN2
+U 4 1 5C18A4BA
+P 6250 6250
+F 0 "RN2" H 6338 6296 50  0000 L CNN
+F 1 "1K" H 6338 6205 50  0000 L CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0603" V 6180 6250 50  0001 C CNN
+F 3 "~" H 6250 6250 50  0001 C CNN
+	4    6250 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 5850 6250 6100
+Wire Wire Line
+	6250 6400 5550 6400
+Wire Wire Line
+	6750 5650 7250 5650
+Wire Wire Line
+	7150 5550 7650 5550
+$Comp
+L power:+5V #PWR024
+U 1 1 5C18E767
+P 8150 5450
+F 0 "#PWR024" H 8150 5300 50  0001 C CNN
+F 1 "+5V" H 8165 5623 50  0000 C CNN
+F 2 "" H 8150 5450 50  0001 C CNN
+F 3 "" H 8150 5450 50  0001 C CNN
+	1    8150 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 5450 8150 5550
+Wire Wire Line
+	8150 5550 7950 5550
+Wire Wire Line
+	7550 5650 8150 5650
+Wire Wire Line
+	8150 5650 8150 5550
+Connection ~ 8150 5550
+Text HLabel 6250 5850 2    50   Output ~ 0
+DTR
+$EndSCHEMATC
