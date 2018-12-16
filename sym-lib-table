@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name Arduino_Uno)(type Legacy)(uri /home/yangle/workspace/arduino-uno/Arduino_Uno.lib)(options "")(descr ""))
+)
