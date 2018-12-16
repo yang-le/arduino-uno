@@ -38,24 +38,24 @@ F 3 "https://www.bourns.com/docs/Product-Datasheets/mfmsmf.pdf" H 1850 4050 50  
 $EndComp
 $Comp
 L Arduino_Uno:RN RN3
-U 1 1 5C164518
+U 4 1 5C164518
 P 2500 4250
 F 0 "RN3" V 2293 4250 50  0000 C CNN
 F 1 "22" V 2384 4250 50  0000 C CNN
 F 2 "Resistor_SMD:R_Array_Convex_4x0603" V 2430 4250 50  0001 C CNN
 F 3 "~" H 2500 4250 50  0001 C CNN
-	1    2500 4250
+	4    2500 4250
 	0    1    1    0   
 $EndComp
 $Comp
 L Arduino_Uno:RN RN3
-U 4 1 5C164596
+U 1 1 5C164596
 P 2950 4350
 F 0 "RN3" V 2743 4350 50  0000 C CNN
 F 1 "22" V 2834 4350 50  0000 C CNN
 F 2 "Resistor_SMD:R_Array_Convex_4x0603" V 2880 4350 50  0001 C CNN
 F 3 "~" H 2950 4350 50  0001 C CNN
-	4    2950 4350
+	1    2950 4350
 	0    1    1    0   
 $EndComp
 $Comp

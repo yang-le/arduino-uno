@@ -5,3 +5,9 @@
 *.csv
 *.xml
 *.html
+*.jpg
+*.png
+*.dsn
+*.rules
+*.ses
+*.jar
