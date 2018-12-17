@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/yangle/workspace/arduino-uno/arduino-uno.sch)
-    (date "2018年12月16日 星期日 21时47分09秒")
+    (date "2018年12月17日 星期一 20时23分21秒")
     (tool "Eeschema 5.0.2-bee76a0~70~ubuntu18.04.1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -338,7 +338,7 @@
       (sheetpath (names /Main/) (tstamps /5C14B8B6/))
       (tstamp 5C196283))
     (comp (ref SW1)
-      (value SW_Push)
+      (value RESET)
       (footprint Button_Switch_SMD:SW_SPST_PTS645)
       (libsource (lib Switch) (part SW_Push) (description "Push button switch, generic, two pins"))
       (sheetpath (names /Main/) (tstamps /5C14B8B6/))
